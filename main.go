@@ -108,7 +108,7 @@ func GetSyscallString(pid int, addr uintptr, cnt int) (string, error) {
 
 func CheckWaitStatus(ws unix.WaitStatus, exitOk bool, usePtFlag bool) (rc int, msg string) {
   if debug {
-		fmt.Printf("*** Wait status for PID %d: 0x%x\n", pid, ws)
+		fmt.Printf("*** Wait status: 0x%x\n", ws)
 	}
   if ws.Exited() {
     heading := ""
